@@ -76,6 +76,9 @@ jobs:
         cd $WORK_PATH/trunk
         sudo chmod +x ./LG-A297_configs.tar.xz
         tar -xvf LG-A297_configs.tar.xz
+    - name: Fix htop build
+      run: |
+        cp -f htop/htop-3.0.2.tar.gz $WORK_PATH/trunk/user/htop
     - name: Custom config
       run: |
         cd $WORK_PATH/trunk
